@@ -356,6 +356,7 @@ line-height: 1.2;
     text-align: center;
     margin-top: 3rem;
 }
+/*
 .review-container .review-box{
     margin-right: 30rem;
     background: var(--snd-bg-color);
@@ -397,6 +398,41 @@ line-height: 1.2;
     }
     100%{
         transform:translateX(0);
+    }
+}*/
+.review-container .review-box,
+.review-container .review-box-2 {
+    background: var(--snd-bg-color);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid var(--main-color);
+    font-size: 1.3rem;
+    animation: slidebox 4s infinite;
+}
+
+@media (max-width: 768px) {
+    .review-container .review-box,
+    .review-container .review-box-2 {
+        margin-right: 0; /* Remove margin */
+        margin-left: 0; /* Remove margin */
+        animation: none; /* Remove animation */
+    }
+
+    .review-container .review-box-2 {
+        margin-top: 2rem; /* Add margin between boxes */
+    }
+}
+
+@keyframes slidebox {
+    0% {
+        transform: translateY(0); /* Use translateY instead of translateX for vertical movement */
+    }
+    50% {
+        transform: translateY(2.4rem);
+    }
+    100% {
+        transform: translateY(0);
     }
 }
 .footer{
