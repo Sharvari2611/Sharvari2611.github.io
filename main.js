@@ -1,3 +1,4 @@
+
 /*===================Toggle icon navbar==================*/
 
 let menuIcon = document.querySelector('#menu-icon');
@@ -55,4 +56,35 @@ const typed = new Typed('.multiple-text',{
     backSpeed:70,
     backDelay:1000,
     loop:true,
-})
+});
+
+/*=====================download PDF ========================*/
+let button = document.querySelector("body a");
+button.addEventListener("click",()=>{
+    const span = document.querySelector("a span");
+    button.computedStyleMap.paddingRight = '10px';
+    span.computedStyleMap.visibility='visible';
+    setTimeout(()=>{
+        span.visibility="hidden;";
+        button.computedStyleMap.paddingRight ="0px";
+    })
+});
+/*========================Form to excel data ==============================*/
+
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbx4O-4eDCShExgtQPuRAL2kPF92Z_tfIfr-irqQoZV0M-WpqdxU2rBVd25rAD8cwv-q/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response)),
+      setTimeout(function(){
+        form.reset();
+      })
+      .catch(error => console.error('Error!', error.message))
+  });
+
+  /*===========================Clear fields================================*/
+  function clearField(){
+    document.getElementById('.input-').value ='';
+  }
