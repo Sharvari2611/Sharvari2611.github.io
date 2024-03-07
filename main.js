@@ -51,7 +51,7 @@ ScrollReveal().reveal('.home-contact p',{origin:'right'})
 
 /*=====================typed JS ========================*/
 const typed = new Typed('.multiple-text',{
-    strings:['an Android Developer','a Salesforce Developer','a Web Designer','an Artist'],
+    strings:['a Software Engineer','an Android Developer','a Salesforce Developer','a Web Designer','an Artist'],
     typeSpeed:70,
     backSpeed:70,
     backDelay:1000,
