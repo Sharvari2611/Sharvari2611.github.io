@@ -54,7 +54,7 @@ section{
 .navbar a{
     font-size: 1.5rem;
     color:var(--text-color);
-    margin-left: 4rem;
+    margin-left: 2rem;
     font-weight:700;
 }
 
@@ -173,6 +173,7 @@ span{
 .about-content h2{
 text-align:left;
 line-height: 1.2;
+
 }
 .about-content h3{
     font-size:2.3rem;
@@ -180,6 +181,7 @@ line-height: 1.2;
 .about-content p{
     font-size:1.4rem;
     margin:2rem 0 3rem;
+    text-align: justify;
 }
 .experience h2{
     margin-bottom: 5rem;
@@ -329,6 +331,7 @@ line-height: 1.2;
     align-items:center;
     gap: 2rem;
     background: var(--snd-bg-color);
+    text-align: justify;
 }
 
 .art-img img{
@@ -363,50 +366,7 @@ line-height: 1.2;
     text-align: center;
     margin-top: 3rem;
 }
-/*
-.review-container .review-box{
-    margin-right: 30rem;
-    background: var(--snd-bg-color);
-    padding: 3rem 2rem 4rem;
-    border-radius: 2rem;
-    text-align:center;
-    border:.2rem solid var(--main-color);
-    animation: slidebox 4s infinite;
-    font-size: 1.3rem;
-}
-.review-container .review-box-2{
-    margin-left: 30rem ;
-    background: var(--snd-bg-color);
-    padding: 3rem 2rem 4rem;
-    border-radius: 2rem;
-    text-align:center;
-    border:.2rem solid var(--main-color);
-    font-size: 1.3rem;
-    animation:  slidebox2 4s infinite;
 
-}
-@keyframes slidebox{
-    0%{
-        transform:translateX(0);
-    }
-    50%{
-        transform:translateX(2.4rem);
-    }
-    100%{
-        transform:translateX(0);
-    }
-}
-@keyframes slidebox2{
-    0%{
-        transform:translateX(0);
-    }
-    50%{
-        transform:translateX(2.4rem);
-    }
-    100%{
-        transform:translateX(0);
-    }
-}*/
 .review-container .review-box,
 .review-container .review-box-2 {
     background: var(--snd-bg-color);
@@ -416,6 +376,7 @@ line-height: 1.2;
     border: .2rem solid var(--main-color);
     font-size: 1.3rem;
     animation: slidebox 4s infinite;
+    
 }
 
 @media (max-width: 768px) {
@@ -461,6 +422,7 @@ padding: .8rem 1rem;
 background: var(--main-color);
 border-radius: .8rem;
 transition: .5s ease;
+
 }
 .footer-iconTop a:hover{
     box-shadow: 0 0 1rem var(--bg-color);
@@ -602,4 +564,49 @@ transition: .5s ease;
         width:100%;
     }
 
+}
+.logo img{
+    width:15vw;
+    animation:floatImage 4s ease-in-out infinite;
+    margin-top: 5rem;
+    margin-left: 10px;
+}
+
+
+@keyframes floatImage{
+    0%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-2.4rem);
+    }
+    100%{
+        transform:translateY(0);
+    }
+}
+.trailblazer-img img{
+    width:80vw;
+    height: 40vw;
+    border-color: var(--main-color);
+    border-width: 1.2rem;
+    margin-top: 1rem;
+   
+}
+.certification-container{
+    display:inline;
+    justify-content: center;
+    align-items:center;
+    gap: 2rem;
+    background: var(--snd-bg-color);
+    align-content: center;
+    text-align: justify;
+    font-size: 1.6rem;
+}
+.certification-container h2{
+    font-size: 2.6rem;
+    
+}
+.certification-container a{
+    color: #fff;
+    text-decoration: underline;
 }
